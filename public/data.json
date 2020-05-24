@@ -1,0 +1,113 @@
+{
+    "users":{
+        "user1" : {
+            "name": "Suzy Q",
+            "goals": ["project1"],
+            "invites":  ["project2"]
+        },
+        "user2" : {
+            "name": "Johnny P",
+            "goals": ["project1"],
+            "invites": []
+        }
+    },
+    "goals":{
+        "project1":{
+            "confirmed": true,
+            "startDate": "02/01/2020",
+            "endDate": "",
+            "duration": 2,
+            "progress":{
+                "user1":
+                    [
+                        true,
+                        false,
+                        false,
+                        true,
+                        true,
+                        true,
+                        false,
+                        true,
+                        true,
+                        true,
+                        false,
+                        true,
+                        true,
+                        true
+                    ],
+                "user2":
+                    [
+                        true,
+                        false,
+                        true,
+                        false,
+                        true,
+                        true,
+                        true,
+                        true,
+                        false,
+                        true,
+                        false,
+                        true,
+                        false,
+                        true
+                    ]
+            },
+            "title": "Do Daily Pushups, Yay",
+            "description": "Do 10 pushups a day.",
+            "groupMembers": {
+                "creator": "user1",
+                "invitee": "user2"
+            }
+        },
+        "project2":{
+            "confirmed": false,
+            "startDate": "02/01/2020",
+            "endDate": "",
+            "duration": 2,
+            "progress":{
+                "user1":
+                [
+                    true,
+                    false,
+                    false,
+                    true,
+                    true,
+                    true,
+                    false,
+                    true,
+                    true,
+                    true,
+                    false,
+                    true,
+                    true,
+                    true
+                ],
+            "user2":
+                [
+                    true,
+                    false,
+                    true,
+                    false,
+                    true,
+                    true,
+                    true,
+                    true,
+                    false,
+                    true,
+                    false,
+                    true,
+                    false,
+                    true
+                ]
+            },
+            "title": "Read 20 Minutes Daily, Yippee",
+            "description": "Let's read!",
+            "groupMembers": {
+                "creator": "user2",
+                "invitee": "user1"
+            }
+        }
+    }
+
+}
