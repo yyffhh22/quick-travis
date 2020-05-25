@@ -51,7 +51,7 @@ const Welcome = ({ user, invites, setGridView}) => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h5" className={classes.title} onClick={() => {window.location.reload(false)}}>
-            Work2Gather
+            Work2Gather Travis
           </Typography>
           <Tooltip title="Home">
             <IconButton onClick={() => setGridView("ACTIVE")}>
