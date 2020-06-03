@@ -2,7 +2,7 @@ import React from 'react';
 import { render, fireEvent, waitForElement, screen, } from '@testing-library/react'
 import SeeMore from './SeeMore';
 import '@testing-library/jest-dom/extend-expect'
-import {getByText} from '@testing-library/dom'
+import {getByText, getByTestId} from '@testing-library/dom'
 
 test('can see more details progress', async() => {
     var goal = {
@@ -63,6 +63,7 @@ test('can see more details progress', async() => {
     };
     render(<SeeMore goal={goal} />)
     fireEvent.click(screen.getByText('See More'))
-    await waitForElement(() => screen.getByText('Close'))
+    // await waitForElement(() => screen.getByText('Close'))
     fireEvent.click(screen.getByText('Close'))
+    expect(screen.getByText("Close")).toBeInTheDocument()
 })

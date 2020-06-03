@@ -45,7 +45,7 @@ export default function SeeMore({ goal, buttonText }) {
   };
 
   const handleClickOpen = () => {
-    setOpen(false);
+    setOpen(true);
   };
 
   const handleClose = () => {
