@@ -6,10 +6,21 @@ import {getByText} from '@testing-library/dom'
 
 test('can see more details progress', async() => {
     var goal = {
-        "confirmed": true,
-        "startDate": "06/02/2020",
-        "endDate": "",
-        "duration": 1,
+        "archivedCreator" : false,
+        "archivedInvitee" : false,
+        "confirmed" : true,
+        "deleted" : true,
+        "description": "Do 10 pushups a day.",
+        "duration" : "2",
+        "goalType" : "Quantitative",
+        "groupMembers": {
+            "creator": "yyffhh",
+            "invitee": "yfh"
+        },
+        "lastRemindCreator" : -1,
+        "lastRemindInvitee" : -1,
+        "metric" : "pushups done",
+        "minimum" : "10",
         "progress":{
             "yyffhh":
                 [
@@ -46,12 +57,9 @@ test('can see more details progress', async() => {
                     8
                 ]
         },
-        "title": "Do Daily Pushups, Yay",
-        "description": "Do 10 pushups a day.",
-        "groupMembers": {
-            "creator": "yyffhh",
-            "invitee": "yfh"
-        }
+        "rejected" : false,
+        "startDate" : "06/02/2020",
+        "title" : "Daily Pushups"
     };
     render(<SeeMore goal={goal} />)
     fireEvent.click(screen.getByText('See More'))
