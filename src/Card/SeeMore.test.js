@@ -63,7 +63,11 @@ test('can see more details progress', async() => {
     };
     render(<SeeMore goal={goal} />)
     fireEvent.click(screen.getByText('See More'))
+    expect(screen.getByTestId("BAR")).toBeInTheDocument()
+    fireEvent.click(screen.getByText('Line'))
+    expect(screen.getByTestId("LINE")).toBeInTheDocument()
+    fireEvent.click(screen.getByText('Area'))
+    expect(screen.getByTestId("AREA")).toBeInTheDocument()
     // await waitForElement(() => screen.getByText('Close'))
-    fireEvent.click(screen.getByText('Close'))
-    expect(screen.getByText("Close")).toBeInTheDocument()
+    // fireEvent.click(screen.getByText('Close'))
 })
