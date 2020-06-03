@@ -121,7 +121,7 @@ export default function SeeMore({ goal, buttonText }) {
         <DialogContent>
           <div>
             <div style={{float:'left'}}>
-              <DialogContentText>
+              <DialogContentText data-testid={"SeeMore"}>
                 {goal.description}
                 <br></br>
                 Started: {goal.startDate}
