@@ -130,7 +130,7 @@ export default function SeeMore({ goal, buttonText }) {
                 <br></br>
               </DialogContentText>
             </div>
-            <div data-testid={'BAR'} style={{float: 'right'}}>
+            <div data-testid={showView} style={{float: 'right'}}>
               { (showView === "LINE") ?
               <LineChart
                 width={500}
