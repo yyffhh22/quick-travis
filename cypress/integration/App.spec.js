@@ -11,10 +11,8 @@ describe ('Test App', () => {
 
     it('user can click the "add a new goal" to create a new goal card', () => {
         cy.visit ('/');
-        cy.contains('Sign in with Google').click();
+        cy.contains('Welcome,');
+        cy.contains('Add a new goal');
         cy.contains('Add a new goal').click();
-        cy.contains('Create a new goal');
-        cy.contains('Submit');
-        cy.contains('Cancel');
         });
   });
